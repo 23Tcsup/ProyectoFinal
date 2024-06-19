@@ -1,0 +1,32 @@
+<div class="blog-slide" style="background-image: url('../../../assets/img/home2.jpg');">
+  <div class="container">
+    <h2>{{ 'testimonios' | Text }}</h2>
+    <div id="blog-slider" class="owl-carousel owl-theme">
+      <div class="d-flex justify-content-between align-items-center">
+        <button class="nav-button" (click)="prevTestimonio()" [disabled]="currentIndex === 0">
+          <i class="fa fa-chevron-left"></i>
+        </button>
+        <div class="post-slide" *ngIf="testimonios.length > 0; else noTestimonios">
+          <div class="post-header">
+            <h4 class="title fw-bold">
+              <a [appColor]="colorValue">{{ 'ensueño' | Text }}</a>
+            </h4>
+            <ul class="post-bar">
+              <li><img src="assets/img/usuario.png" alt="Author Image" ><a class="text-dark fw-bold" >{{ testimonios[currentIndex].nombre }}</a></li>
+              <li [appColor]="colorValue"><i [appColor]="colorValue" class="fa fa-calendar" style="margin-right: 10px;"></i  >{{ testimonios[currentIndex].fecha_publicacion | date: 'medium' }} </li>
+            </ul>
+          </div>
+          <p class="post-description">
+            {{ testimonios[currentIndex].testimonio }}
+          </p>
+        </div>
+        <button  class="nav-button" (click)="nextTestimonio()" [disabled]="currentIndex === testimonios.length - 1">
+          <i class="fa fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <ng-template #noTestimonios>
+    <p>No hay testimonios disponibles.</p>
+  </ng-template>
+</div>

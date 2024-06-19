@@ -1,0 +1,18 @@
+<app-carrusel></app-carrusel>
+<app-info></app-info>
+<app-testimonios></app-testimonios>
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Nuestras Delicias</h2>
+    <div class="row">
+        <div *ngFor="let galeria of imagesToShow" class="col-md-4 mb-4">
+            <div class="card shadow hover-card">
+                <a href="#" class="d-block position-relative">
+                    <img [src]="galeria.img" class="card-img-top img-fluid galeria-img" [alt]="galeria.tipo">
+                </a>
+            </div>
+        </div>
+    </div>
+    <button (click)="navigateToPlatos()" class="btn btn-ver-mas mt-3">Ver más</button>
+ </div>
+ 

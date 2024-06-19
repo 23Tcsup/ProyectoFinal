@@ -1,0 +1,120 @@
+.blog-slide {
+  position: relative;
+  background-image: url('../../../assets/img/carousel.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+}
+
+.blog-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.blog-slide h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.owl-carousel .owl-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-slide {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 10px rgba(20, 20, 20, 0.1);
+  max-width: 600px; 
+  width: 100%; 
+}
+
+.post-header {
+  margin-bottom: 25px;
+}
+
+.post-header .title {
+  font-size: 1.8em;
+  text-align: left;
+}
+
+.post-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9em;
+  color: #777;
+}
+
+.post-bar li {
+  margin-right: 20px;
+}
+
+.post-bar li img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post-bar li a {
+  color: #777;
+  text-decoration: none;
+}
+
+.post-bar li a:hover {
+  text-decoration: underline;
+}
+
+.post-description {
+  color: #555;
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-height: 200px; 
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+
+}
+
+.nav-button:focus {
+  outline: none;
+}
+
+.nav-button:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.nav-button i {
+  padding: 0 15px;
+}
+.title a {
+  font-size: 14px; 
+}

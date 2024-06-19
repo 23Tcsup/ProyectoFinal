@@ -1,0 +1,20 @@
+<div class="services-bar">
+    <div class="container">
+        <h1 class="py-4 text-center">Nuestros Mejores Eventos</h1>
+        <div class="row">
+            <div class="col-lg-4 mb-4" *ngFor="let evento of eventos">
+                <div class="card h-100">
+                    <div class="card-img">
+                        <img class="img-fluid" [src]="evento.img" [alt]="evento.nombre" [appColor]="colorValue" />
+                    </div>
+                    <div class="card-body">
+                        <h4 class="event-title" [appColor]="colorValue">{{ evento.nombre }}</h4>
+                        <div class="title-separator"></div>
+                        <p class="card-text">{{ evento.descripcion }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
